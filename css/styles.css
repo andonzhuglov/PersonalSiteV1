@@ -1,0 +1,328 @@
+@import url(https://fonts.googleapis.com/css?family=Sora);
+@import url(http://fonts.cdnfonts.com/css/bogart);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+}
+
+body {
+    margin: 0px;
+    color: #D5D5D5;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.top-container {
+    padding-top: 100px;
+    margin: 0px;
+    background-color: #1F1D36;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.middle-container {
+    padding: 30px 0 40px;
+    color: #1F1D36;
+    margin: 0px;
+    background-color: #F6E7D8;
+    height: 100%;
+    width: 100%;
+}
+
+.bottom-container {
+    padding: 20px 0 10px;
+    margin: 0px;
+    background-color: #1F1D36;
+    height: 100%;
+    width: 100%;
+
+}
+
+h1, h2, h3 {
+    margin-top: 30px;
+    font-family: 'Bogart', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.top-cloud {
+    position: absolute;
+    top: 50px;
+    right: 550px;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 300px;
+    top: 100px;
+}
+
+.logo {
+    position: relative;
+    margin: 10px;
+    top: -10px;
+    left: 50px;
+    background-color: #FF1E56;
+}
+
+.logo-img {
+    width: 100px;
+}
+
+
+.navbar {
+    display: flex;
+    position: relative;
+    bottom: 100px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+    
+}
+
+
+a {
+    text-decoration: none;
+    color: #D5D5D5;
+    margin: 10px;
+}
+
+a:hover {
+    color: #FF1E56;
+    transition: 0.8s;
+}
+
+
+.about-me {
+    padding: 50px;
+}
+
+.avatar {
+    position: relative;
+    border-radius: 50%;
+    width: 250px;
+    top: 10px;
+    margin: 0 10px;
+}
+
+.about-me-text {
+    position: relative;
+    width: 400px;
+    display: inline-block;
+    margin: 40px 0;
+    bottom: 40px;
+}
+
+
+
+.hover-underline-animation {
+    padding-bottom: 3px;
+    position: relative;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    background-color: #FF1E56;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.btn {
+    padding: 15px;
+    color: #000;
+    background-color: #F6E7D8;
+    border-radius: 5%;
+    position: relative;
+    margin: 30px;
+}
+
+.btn:hover {
+    color: #FF1E56;
+    transition: transform 1s;
+}
+
+.footer-links {
+    color: #D5D5D5; 
+    padding: 0px;
+    margin: 50px 0;
+}
+
+.contact-me {
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    border-style: dotted none none;
+    border-color: #FF1E56;
+    border-width: 5px;
+    width: 5%;
+    margin: auto;
+}
+
+.skill-images {
+    width: 70px;
+    height: 70px;
+}
+
+.skill-images:hover {
+    transition: transform 0.75s;
+}
+
+p {
+    width: 40%;
+    margin: 20px auto;
+    line-height: 2;
+}
+
+b:hover {
+    color: #FF1E56;
+}
+
+.experience {
+    width: 100%;
+    margin: 0px auto 25px;
+
+}
+.experience h4 {
+    margin: 10px;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+.footer-link-images {
+    width: 40px;
+    height: 40px;
+}
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #FF1E56; /* Set a background color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 5px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  #myBtn:hover {
+    background-color: #FF0058; /* Add a dark-grey background on hover */
+  }
+
+  .arrow-up {
+      width: 40px;
+      height: 40px;
+  }
+
+  .port-media {
+    display: inline-block;
+    margin-bottom: 20px
+  }
+  .portfolio-image {
+      width: 15%;
+      margin: 0 40px;
+      border: 3px solid black;
+  }
+
+  .portfolio-image:hover {
+      width: 15.5%;
+      border: 2px solid #FF1E56;
+      transition: 0.3s ease;
+  }
+  
+
